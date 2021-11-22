@@ -10,6 +10,7 @@
   font-weight: 700;
 
   display: flex;
+  justify-content: space-between;
 
   &__nav-item {
     height: 100%;
@@ -22,14 +23,41 @@
   &__dropdown {
     display: none;
     width: 100%;
-    padding: 2rem;
+    // padding: 2rem;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #3f2d7b;
+    cursor: initial;
+
+    &--align-right {
+      justify-content: flex-end;
+    }
   }
 
   &__nav-item--dropdown:hover &__dropdown {
-    display: block;
+    display: flex;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &-item {
+      margin: 1rem 0;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    &--search {
+      height: 2rem;
+      margin: 0 2rem 2rem auto;
+      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
   }
 }

@@ -14,17 +14,23 @@ export const Header = ({ competencies, search, handleSearch }: Props) => {
       <div className="header__nav-item header__nav-item--dropdown">
         Competencies
         <div className="header__dropdown">
-          <ul>
+          <ul className="header__list">
             {competencies.map((item) => (
-              <li>{item}</li>
+              <li
+                className="header__list-item"
+                onClick={() => handleSearch(item)}
+              >
+                {item}
+              </li>
             ))}
           </ul>
         </div>
       </div>
       <div className="header__nav-item header__nav-item--dropdown">
         Search
-        <div className="header__dropdown">
+        <div className="header__dropdown header__dropdown--align-right">
           <input
+            className="header__input header__input--search"
             type="text"
             value={search}
             onChange={(e) => handleSearch(e.target.value)}

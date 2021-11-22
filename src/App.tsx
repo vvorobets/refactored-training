@@ -6,6 +6,7 @@ import { Header } from "./header";
 import { questions as sourceQuestions } from "./questions";
 import { QuestionDetails } from "./question-details";
 import { Modal } from "./modal";
+import { group } from "console";
 
 function App() {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -20,9 +21,10 @@ function App() {
 
   const filteredQuestions = useMemo(() => {
     return questions.filter(
-      ({ title, description, list }) =>
+      ({ title, group, description, list }) =>
         title.includes(search) ||
         description.includes(search) ||
+        group.includes(search) ||
         list?.some(
           (item) =>
             item.title.includes(search) || item.description.includes(search)
@@ -30,10 +32,15 @@ function App() {
     );
   }, [questions, search]);
 
+  const competencies = useMemo(() => {
+    // return questions.map(({ group }) => group);
+    return Array.from(new Set(questions.map(({ group }) => group)));
+  }, [questions]);
+
   return (
     <div className="App">
       <Header
-        competencies={[]}
+        competencies={competencies}
         search={search}
         handleSearch={(val) => setSearch(val)}
       />
