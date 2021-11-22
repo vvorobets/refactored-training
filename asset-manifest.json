@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/refactored-training/static/css/main.92991f9d.chunk.css",
-    "main.js": "/refactored-training/static/js/main.3eccd853.chunk.js",
-    "main.js.map": "/refactored-training/static/js/main.3eccd853.chunk.js.map",
+    "main.css": "/refactored-training/static/css/main.e4881aa7.chunk.css",
+    "main.js": "/refactored-training/static/js/main.44a537b0.chunk.js",
+    "main.js.map": "/refactored-training/static/js/main.44a537b0.chunk.js.map",
     "runtime-main.js": "/refactored-training/static/js/runtime-main.25233c07.js",
     "runtime-main.js.map": "/refactored-training/static/js/runtime-main.25233c07.js.map",
     "static/js/2.a003839c.chunk.js": "/refactored-training/static/js/2.a003839c.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.f44c5c06.chunk.js": "/refactored-training/static/js/3.f44c5c06.chunk.js",
     "static/js/3.f44c5c06.chunk.js.map": "/refactored-training/static/js/3.f44c5c06.chunk.js.map",
     "index.html": "/refactored-training/index.html",
-    "static/css/main.92991f9d.chunk.css.map": "/refactored-training/static/css/main.92991f9d.chunk.css.map",
+    "static/css/main.e4881aa7.chunk.css.map": "/refactored-training/static/css/main.e4881aa7.chunk.css.map",
     "static/js/2.a003839c.chunk.js.LICENSE.txt": "/refactored-training/static/js/2.a003839c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.25233c07.js",
     "static/js/2.a003839c.chunk.js",
-    "static/css/main.92991f9d.chunk.css",
-    "static/js/main.3eccd853.chunk.js"
+    "static/css/main.e4881aa7.chunk.css",
+    "static/js/main.44a537b0.chunk.js"
   ]
 }
