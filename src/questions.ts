@@ -14,7 +14,7 @@ export const questions: Question[] = [
   },
   {
     id: "2",
-    title: "ergwergb sergs rtwer wetwer",
+    title: "Some meaningless text here",
     group: "dummy",
     description:
       "werert wertwer vwerv tery ertser awe etyu tyuk dg ser awerrv cd",
@@ -103,33 +103,109 @@ export const questions: Question[] = [
   },
   {
     id: "4.1",
-    title: "Tools created to control/ improve code quality",
+    title: "Tools to control/ improve code quality",
     group: "Code quality",
     description: "",
   },
   {
     id: "4.2",
-    title: "Cyclomatic complexity and why it's important",
+    title: "Cyclomatic complexity",
     group: "Code quality",
-    description: "",
+    description: `Cyclomatic complexity (CYC) is a software metric used to determine the complexity of a program. 
+    It is a count of the number of decisions in the source code. 
+    The higher the count, the more complex the code.`,
+    list: [
+      {
+        title: "why it's important",
+        description: `1) Limit code complexity; 2) Determine the number of test cases required`,
+      },
+      {
+        title: "how to calculate CYC",
+        description: `CYC = E – N + 2P
+
+  (E = Number of edges (transfers of control); 
+  N = Number of nodes (sequential group of statements containing only one transfer of control);
+  This translates to the number of decisions + 1;
+  P = Number of disconnected parts of the flow graph (e.g. a calling program and a subroutine))
+  
+  Binary decisions — such as “if” and “while” statements — add 1 to complexity.
+  
+  Boolean operators can add either one or nothing to complexity. For instance, one may be added if a Boolean operator is found within a conditional statement.
+    
+  void foo(void)
+  {
+      if (a)
+          if (b) 
+              x=1;
+      else
+          x=2;
+   }
+  So, CYC = 3 in this example. 
+  `,
+      },
+    ],
   },
   {
     id: "5.1",
-    title: "TDD and BDD, its difference, and use-cases",
+    title: "TDD / BDD",
     group: "Testing / Unit testing",
-    description: "",
+    description: ``,
+    list: [
+      {
+        title: "Test-Driven Development (TDD)",
+        description: `a testing methodology or a programming practice implemented from a developer’s perspective. 
+  This technique starts by designing and writing test cases for every small functionality of an application. 
+  The main intention of this technique is to modify or write a fresh code only when the test fails. 
+  In a TDD approach, automated test scripts are written before functional pieces of code. The TDD methodology involves the following steps:
+  1) Write a Failing Test - 2) Execute All Existing Tests - 3) Write Production Code to Make the Test Pass - 4) Refactor If Necessary`,
+      },
+      {
+        title: "Benefits of Test-Driven Development",
+        description: `Simpler design. Fewer defects. Detailed project specification. High test coverage. High code coverage. Fewer regression problems.`,
+      },
+      {
+        title: "Behavioral-Driven Development (BDD) ",
+        description: `is a testing approach derived from the TDD methodology. In BDD, tests are mainly based on systems behavior. 
+        In most cases, the Given-When-Then approach is used for writing test cases.
+        1) Write the Behavior - 2) Convert the Plain English Behaviors Into Scripts - 3) Implement the Behavior by Writing Production Code - 4) Refactor If Needed`,
+      },
+      {
+        title: "Key benefits of Behavioral-Driven Development approach",
+        description: `Collaboration. Fewer defects. Fewer regression problems. Comprehensive project documentation fit for multiple target audiences.
+Traceability for every piece of functionality.`,
+      },
+      {
+        title: `Acceptance Test-Driven Development (ATDD)`,
+        description: `a single acceptance test is written from the user’s perspective. It mainly focuses on satisfying the functional behavior of the system. This technique attempts to answer the question – Is the code working as expected?
+
+        Note: Acceptance Test-Driven Development is very similar to Behavioral-Driven Development. However, a key difference between them is: BDD focuses more on the behavior of the feature, whereas ATDD focuses on capturing the accurate requirements.
+        This technique enhances collaboration among developers, users, and QAs with a common focus on defining the acceptance criteria. The following are some of the key practices in ATDD:
+        
+        Analyzing and discussing the real-world scenarios
+        Deciding the acceptance criteria for those test scenarios
+        Automating the acceptance test cases
+        Focusing on the development of those requirement cases
+        `,
+      },
+      {
+        title: "Benefits of ATDD",
+        description: `1) Requirements are very clearly analyzed without any ambiguity; 
+        2) Encourages collaboration among cross-team members;
+        3) The acceptance test serves as a guide for the entire development process`,
+      },
+    ],
   },
   {
     id: "5.2",
-    title:
-      "Different types of tests (black-box, API, integration and etc., and difference between them); ",
+    title: "Different types of tests",
     group: "Testing / Unit testing",
-    description: "",
+    description:
+      "(black-box, API, integration and etc., and difference between them)",
   },
   {
     id: "5.3",
-    title: "Mock vs stub difference",
+    title: "Mock vs stub",
     group: "Testing / Unit testing",
-    description: "",
+    description: "difference",
   },
 ];
