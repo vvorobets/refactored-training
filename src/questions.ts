@@ -1,25 +1,6 @@
 import { Question } from "./question";
 
-export const questions: Question[] = [
-  {
-    id: "1",
-    title: "ABCD",
-    group: "dummy",
-    description: "Some really new concept",
-    list: [
-      { title: "Pattern 1", description: "This is the first case" },
-      { title: "Pattern 2", description: "This is the second case" },
-    ],
-    links: ["www.example.com"],
-  },
-  {
-    id: "2",
-    title: "Some meaningless text here",
-    group: "dummy",
-    description:
-      "werert wertwer vwerv tery ertser awe etyu tyuk dg ser awerrv cd",
-  },
-  {
+export const questions: Question[] = [{
     id: "3",
     title: "GRASP patterns",
     group: "GRASP patterns",
@@ -106,6 +87,41 @@ export const questions: Question[] = [
     title: "Tools to control/ improve code quality",
     group: "Code quality",
     description: "",
+    list: [
+      {
+        title: "ESLint",
+        description: `a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. 
+      Linting is all about analysing the code without having to execute it`,
+      },
+      {
+        title: "Prettier",
+        description: `An opinionated code formatter`,
+      },
+      {
+        title: "GIT (Code Review)",
+        description: `Open Source distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people`,
+      },
+      {
+        title: "Unit, integration, and functional testing",
+        description: `Unit: jest, mocha, sinon, chai, jasmine. Integrational: Selenium WebDriver, cypress, supertest`,
+      },
+      {
+        title: "Refactoring",
+        description: `IDE's built-in tools for automated refactoring based on sourse code's semantic tree`,
+      },
+      {
+        title: "unimported (npm package)",
+        description: `analyzes your code by following the require/import statements starting from your entry file, showing which files are unimported, which dependencies are missing from your package.json, and which dependencies can be removed from your package.json`,
+      },
+      {
+        title: "webpack-bundle-analyzer",
+        description: `will help you realize what's really inside your bundle, find out what modules make up the most of its size and find modules that got there by mistake`,
+      },
+      {
+        title: "dependency-cruiser (npm package)",
+        description: `runs through the modules of your project (detecting circular dependencies, dependencies missing in package.json, orphans, production code relying on dev- or optionalDependencies etc.), can generates dependency graphs`,
+      },
+    ],
   },
   {
     id: "4.2",
@@ -113,23 +129,16 @@ export const questions: Question[] = [
     group: "Code quality",
     description: `Cyclomatic complexity (CYC) is a software metric used to determine the complexity of a program. 
     It is a count of the number of decisions in the source code. 
-    The higher the count, the more complex the code.`,
-    list: [
-      {
-        title: "why it's important",
-        description: `1) Limit code complexity; 2) Determine the number of test cases required`,
-      },
-      {
-        title: "how to calculate CYC",
-        description: `CYC = E – N + 2P
+    The higher the count, the more complex the code.
+    Why it's important: 1) Limit code complexity; 2) Determine the number of test cases required.
+    How to calculate CYC: CYC = E – N + 2P
 
   (E = Number of edges (transfers of control); 
   N = Number of nodes (sequential group of statements containing only one transfer of control);
   This translates to the number of decisions + 1;
-  P = Number of disconnected parts of the flow graph (e.g. a calling program and a subroutine))
+  P = Number of disconnected parts of the flow graph (e.g. a calling program and a subroutine)).
   
-  Binary decisions — such as “if” and “while” statements — add 1 to complexity.
-  
+  Binary decisions (if/while) add 1 to complexity.
   Boolean operators can add either one or nothing to complexity. For instance, one may be added if a Boolean operator is found within a conditional statement.
     
   void foo(void)
@@ -142,8 +151,6 @@ export const questions: Question[] = [
    }
   So, CYC = 3 in this example. 
   `,
-      },
-    ],
   },
   {
     id: "5.1",
@@ -156,40 +163,32 @@ export const questions: Question[] = [
         description: `a testing methodology or a programming practice implemented from a developer’s perspective. 
   This technique starts by designing and writing test cases for every small functionality of an application. 
   The main intention of this technique is to modify or write a fresh code only when the test fails. 
-  In a TDD approach, automated test scripts are written before functional pieces of code. The TDD methodology involves the following steps:
-  1) Write a Failing Test - 2) Execute All Existing Tests - 3) Write Production Code to Make the Test Pass - 4) Refactor If Necessary`,
-      },
-      {
-        title: "Benefits of Test-Driven Development",
-        description: `Simpler design. Fewer defects. Detailed project specification. High test coverage. High code coverage. Fewer regression problems.`,
+  In a TDD approach, automated test scripts are written before functional pieces of code. Involves the following steps:
+  1) Write a Failing Test - 2) Execute All Existing Tests - 3) Write Production Code to Make the Test Pass - 4) Refactor If Necessary.
+  Benefits of Test-Driven Development: Simpler design; Fewer defects; Detailed project specification; High test coverage; High code coverage; Fewer regression problems.`,
       },
       {
         title: "Behavioral-Driven Development (BDD) ",
-        description: `is a testing approach derived from the TDD methodology. In BDD, tests are mainly based on systems behavior. 
-        In most cases, the Given-When-Then approach is used for writing test cases.
-        1) Write the Behavior - 2) Convert the Plain English Behaviors Into Scripts - 3) Implement the Behavior by Writing Production Code - 4) Refactor If Needed`,
-      },
-      {
-        title: "Key benefits of Behavioral-Driven Development approach",
-        description: `Collaboration. Fewer defects. Fewer regression problems. Comprehensive project documentation fit for multiple target audiences.
-Traceability for every piece of functionality.`,
+        description: `is a testing approach derived from the TDD methodology. 
+        Tests are mainly based on systems behavior, in most cases, the Given-When-Then approach is used for writing test cases.
+        1) Write the Behavior - 2) Convert the Plain English Behaviors Into Scripts - 3) Implement the Behavior by Writing Production Code - 4) Refactor If Needed.
+        Key benefits of Behavioral-Driven Development approach: Collaboration; Fewer defects; Fewer regression problems; Comprehensive project documentation fit for multiple target audiences;
+        Traceability for every piece of functionality.`,
       },
       {
         title: `Acceptance Test-Driven Development (ATDD)`,
-        description: `a single acceptance test is written from the user’s perspective. It mainly focuses on satisfying the functional behavior of the system. This technique attempts to answer the question – Is the code working as expected?
+        description: `a single acceptance test is written from the user’s perspective.
+        It mainly focuses on satisfying the functional behavior of the system. 
+        This technique attempts to answer the question – Is the code working as expected?
 
-        Note: Acceptance Test-Driven Development is very similar to Behavioral-Driven Development. However, a key difference between them is: BDD focuses more on the behavior of the feature, whereas ATDD focuses on capturing the accurate requirements.
-        This technique enhances collaboration among developers, users, and QAs with a common focus on defining the acceptance criteria. The following are some of the key practices in ATDD:
-        
-        Analyzing and discussing the real-world scenarios
-        Deciding the acceptance criteria for those test scenarios
-        Automating the acceptance test cases
-        Focusing on the development of those requirement cases
-        `,
-      },
-      {
-        title: "Benefits of ATDD",
-        description: `1) Requirements are very clearly analyzed without any ambiguity; 
+        A key difference: BDD focuses more on the behavior of the feature, whereas ATDD focuses on capturing the accurate requirements.
+        The following are some of the key practices in ATDD:
+        - Analyzing and discussing the real-world scenarios
+        - Deciding the acceptance criteria for those test scenarios
+        - Automating the acceptance test cases
+        - Focusing on the development of those requirement cases.
+
+        Benefits of ATDD: 1) Requirements are very clearly analyzed without any ambiguity; 
         2) Encourages collaboration among cross-team members;
         3) The acceptance test serves as a guide for the entire development process`,
       },
@@ -200,12 +199,197 @@ Traceability for every piece of functionality.`,
     title: "Different types of tests",
     group: "Testing / Unit testing",
     description:
-      "(black-box, API, integration and etc., and difference between them)",
+      "Accessibility, Acceptance, Black box, End to end, Functional, Interactive, Integration, Load, Non functional, Performance, Regression, Sanity, Security, Single user performance, Smoke, Stress, Unit, White-box",
+    list: [
+      {
+        title: "Unit tests",
+        description: `are very low level. They consist in testing individual methods and functions of the classes, components or modules used by your software. Unit tests are in general quite cheap to automate and can be run very quickly.`,
+      },
+      {
+        title: "Integration tests",
+        description: `verify that different modules or services used by your application work well together. For example, it can be testing the interaction with the database or making sure that microservices work together as expected. 
+        These types of tests are more expensive to run as they require multiple parts of the application to be up and running.`,
+      },
+      {
+        title: "Functional tests",
+        description: `focus on the business requirements of an application. They only verify the output of an action and do not check the intermediate states of the system when performing that action.
+      An integration test may simply verify that you can query the database while a functional test would expect to get a specific value from the database as defined by the product requirements.`,
+      },
+      {
+        title: "End-to-end tests",
+        description: `replicates a user behavior with the software in a complete application environment. It verifies that various user flows work as expected and can be as simple as loading a web page or logging in or much more complex scenarios verifying email notifications, online payments, etc...
+      End-to-end tests are very useful, but they're expensive to perform and can be hard to maintain when they're automated.`,
+      },
+      {
+        title: "Acceptance tests",
+        description: `are formal tests executed to verify if a system satisfies its business requirements.
+        They require the entire application to be up and running and focus on replicating user behaviors. But they can also go further and measure the performance of the system and reject changes if certain goals are not met.`,
+      },
+      {
+        title: "Performance tests",
+        description: `check the behaviors of the system when it is under significant load. These tests are non-functional and can have the various form to understand the reliability, stability, and availability of the platform.
+      Performance tests are by their nature quite costly to implement and run, but they can help you understand if new changes are going to degrade your system.`,
+      },
+      {
+        title: "Smoke tests",
+        description: `Smoke tests are basic tests that check basic functionality of the application. They are meant to be quick to execute, and their goal is to give you the assurance that the major features of your system are working as expected.
+      Smoke tests can be useful right after a new build is made to decide whether or not you can run more expensive tests, or right after a deployment to make sure that they application is running properly in the newly deployed environment.`,
+      },
+      {
+        title: "Black Box Testing",
+        description: `involves testing against a system where the code and paths are invisible.`,
+      },
+      {
+        title: "White Box Testing",
+        description: `involves testing the product's underlying structure, architecture, and code to validate input-output flow and enhance design, usability, and security.`,
+      },
+    ],
   },
   {
     id: "5.3",
-    title: "Mock vs stub",
+    title: "Test doubles: mock, stub, spy, fake, dummy",
     group: "Testing / Unit testing",
-    description: "difference",
+    description: "",
+    list: [
+      {
+        title: "Dummy",
+        description:
+          "objects are passed around but never actually used. Usually they are just used to fill parameter lists.",
+      },
+      {
+        title: "Fake",
+        description:
+          "objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example)",
+      },
+      {
+        title: "Stubs",
+        description:
+          "provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test.",
+      },
+      {
+        title: "Spies",
+        description:
+          "are stubs that also record some information based on how they were called.",
+      },
+      {
+        title: "Mocks",
+        description:
+          "objects pre-programmed with expectations which form a specification of the calls they are expected to receive.",
+      },
+      {
+        title: "Test Double",
+        description:
+          "any kind of pretend object used in place of a real object for testing purposes",
+      },
+    ],
+  },
+  {
+    id: "6.1",
+    title: "Recap of SOC principle, practical use if possible",
+    group: "Object oriented design",
+    description:
+      ``,
+  },
+  {
+    id: "6.2",
+    title: "GoF patterns / Antipatterns",
+    group: "Object oriented design",
+    description:
+      ``,
+      links: ['http://refactoring.guru']
+  },
+  {
+    id: "6.3",
+    title: "Abstraction Qualities (cohesion high / low, coupling)",
+    group: "Object oriented design",
+    description:
+      ``,
+  },
+
+  {
+    id: "7.1",
+    title: "Learn about UML syntax, notations, and use-cases",
+    group: "UML Modeling",
+    description:
+      ``,
+  },
+  {
+    id: "7.2",
+    title: "Know about Structure, Behaviour, State, Interaction and Sequence diagram, as well as more simple once (class, flow and use-cases diagrams)",
+    group: "UML Modeling",
+    description:
+      ``,
+  },
+
+  {
+    id: "8.1",
+    title: "Parallelism in Node.JS: Learn how nodejs works in parallel on OS level (thread env)",
+    group: "NodeJS",
+    description:
+      ``,
+  },
+  {
+    id: "8.2",
+    title: "Parallelism in Node.JS: child_process, cluster, and workers libs, difference, know when to use what",
+    group: "NodeJS",
+    description:
+      ``,
+  },
+  {
+    id: "8.5",
+    title: "Get familiar with V8 and VM modules",
+    group: "NodeJS",
+    description:
+      ``,
+  },
+  {
+    id: "8.6",
+    title: "Graceful shutdown techniques",
+    group: "NodeJS",
+    description:
+      ``,
+  },
+  {
+    id: "8.7",
+    title: "Extend knowledge about core modules in NodeJS",
+    group: "NodeJS",
+    description:
+      ``,
+  },
+  {
+    id: "8.8",
+    title: "Learn how ORM and ODM are working",
+    group: "NodeJS",
+    description:
+      ``,
+  },
+
+  {
+    id: "9.1",
+    title: "Learn about memory management along with the structures that are used to provide memory env (stack, heap, queue)",
+    group: "Core JavaScript",
+    description:
+      ``,
+  },
+  {
+    id: "9.2",
+    title: "Know about how GC is working (where/when it's running, the possibility of running it manually, why it could be useful)",
+    group: "Core JavaScript",
+    description:
+      ``,
+  },
+  {
+    id: "9.3",
+    title: "Recap about prototypal inheritance",
+    group: "Core JavaScript",
+    description:
+      ``,
+  },
+  {
+    id: "9.4",
+    title: "WeakSet and WeakMap recap",
+    group: "Core JavaScript",
+    description:
+      ``,
   },
 ];

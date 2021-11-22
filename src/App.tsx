@@ -6,7 +6,6 @@ import { Header } from "./header";
 import { questions as sourceQuestions } from "./questions";
 import { QuestionDetails } from "./question-details";
 import { Modal } from "./modal";
-import { group } from "console";
 
 function App() {
   const [questions, setQuestions] = useState<Question[]>([]);
