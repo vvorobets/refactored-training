@@ -1,0 +1,35 @@
+.header {
+  position: sticky;
+  top: 0;
+
+  height: 5rem;
+  padding: 0 2rem;
+  background-color: #3f2d7b;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  display: flex;
+
+  &__nav-item {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    display: none;
+    width: 100%;
+    padding: 2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3f2d7b;
+  }
+
+  &__nav-item--dropdown:hover &__dropdown {
+    display: block;
+  }
+}

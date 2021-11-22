@@ -1,8 +1,13 @@
 .questions-grid {
+  margin: 0;
   background-color: rgb(255, 180, 100);
   padding: 4rem 2rem;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  .question-card {
+      width: 28%;
+  }
 }

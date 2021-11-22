@@ -6,7 +6,7 @@ import "./style.scss";
 
 interface Props {
   questions: Question[];
-  selectQuestion: (id: string) => void;
+  selectQuestion: (question: Question) => void;
 }
 
 export const QuestionsGrid = ({ questions, selectQuestion }: Props) => {
@@ -17,7 +17,7 @@ export const QuestionsGrid = ({ questions, selectQuestion }: Props) => {
           key={item.id}
           id={item.id}
           title={item.title}
-          clickHandler={selectQuestion}
+          clickHandler={() => selectQuestion(item)}
         />
       ))}
     </ul>
