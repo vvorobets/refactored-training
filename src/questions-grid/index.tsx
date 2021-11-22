@@ -17,6 +17,7 @@ export const QuestionsGrid = ({ questions, selectQuestion }: Props) => {
           key={item.id}
           id={item.id}
           title={item.title}
+          label={item.group}
           clickHandler={() => selectQuestion(item)}
         />
       ))}

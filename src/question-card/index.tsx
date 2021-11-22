@@ -4,13 +4,15 @@ import "./style.scss";
 interface Props {
   id: string;
   title: string;
+  label: string;
   clickHandler: () => void;
 }
 
-export const QuestionCard = ({ id, title, clickHandler }: Props) => {
+export const QuestionCard = ({ title, label, clickHandler }: Props) => {
   return (
     <div className="question-card" onClick={() => clickHandler()}>
-      {title}
+      <h3 className="question-card__header">{title}</h3>
+      <i>{label}</i>
     </div>
   );
 };
