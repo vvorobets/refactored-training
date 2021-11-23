@@ -1,6 +1,10 @@
 .question-details {
   line-height: 1.5;
 
+  &__title {
+    text-transform: uppercase;
+  }
+
   &__description {
     margin: 0;
   }

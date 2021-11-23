@@ -4,9 +4,7 @@ export const questions: Question[] = [{
     id: "3",
     title: "GRASP patterns",
     group: "GRASP patterns",
-    description: `The Domain Model illustrates conceptual classes of the real - world domain; the Design Model illustrates software classes. \n
-      Composite aggregates Part, Container contains Content, and Recorder records. \n
-      The GRASP principles will let you understand the rationale behind the GoF design patterns. \n
+    description: `The GRASP principles will let you understand the rationale behind the GoF design patterns. \n
       There are nine GRASP patterns:`,
     list: [
       {
@@ -17,10 +15,8 @@ export const questions: Question[] = [{
       {
         title: "Creator",
         description: `gives guidelines as to which class B should be in charge of creating a certain type of objects A. 
-        B contains or aggregates instances of A
-        B closely uses A
-        B has the inputs to construct A
-        This goes a further than Information expert: it’s not just about having the input of the operation of construction, it’s about being “close” to the operation.`,
+        1) B contains or aggregates instances of A; 2) B closely uses A; 3) B has the inputs to construct A;
+        it’s not just about having the input of the operation of construction, it’s about being “close” to the operation.`,
       },
       {
         title: "Low coupling",
@@ -29,9 +25,9 @@ export const questions: Question[] = [{
       },
       {
         title: "High cohesion",
-        description: `The principle of High cohesion encourages to focus classes around one responsibility, and to have all its components oriented towards achieving this responsibility. 
+        description: `The principle encourages to focus classes around one responsibility, and to have all its components oriented towards achieving this responsibility. 
       This is the principle of “do one thing and do it well”. 
-      The principle of high cohesion also applies to other elements of the code, such as functions, and also modules and systems. 
+      Also applies to other elements of the code, such as functions, and also modules and systems. 
       This ties back well with the idea of having a well-organized code: a highly cohesive component lets you label it in your mind with “this is the part of the code that does X”. 
       This allows better mental abstractions as well as code abstractions. 
       is a measure of how strongly related and focused the responsibilities of an element are`,
@@ -39,17 +35,16 @@ export const questions: Question[] = [{
       {
         title: "Polymorphism",
         description: `is often seen as having a base class with virtual methods that defines an interface, and derived classes implementing this interface, but this is only one type of polymorphism. 
-      There are plenty of types of polymorphism (including templates for example). 
-      The usage for polymorsphism is when there are several ways to accomplish a task, and you want to decouple the clients of this task from the various pieces of code that implement the various ways to perform it. 
-      The Polymorphism principle is very close to the GoF Strategy pattern, if not identical. 
-      It contributes to the Low Coupling principle.`,
+      There are plenty of types of it (including templates for example). 
+      The usage is when there are several ways to accomplish a task, and you want to decouple the clients of this task from the various pieces of code that implement the various ways to perform it. 
+      The principle is very close to the GoF Strategy pattern, if not identical. It contributes to the Low Coupling principle.`,
       },
       {
         title: "Pure fabrication",
         description: `It is natural to represent in our code objects that map the reality of the domain that we’re trying to model. 
       For example, if you’re working on a financial application, you can probably expect to encounter some classes called Transaction or Portfolio in the code. 
       But sometimes you have a responsibility to assign, and it seems to not fit well in any domain class. 
-      And according to the principle of High cohesion above, you shouldn’t force a responsibility into a class that is already doing something else. 
+      And according to the principle of High cohesion, you shouldn’t force a responsibility into a class that is already doing something else. 
       That’s when the principle of Pure fabrication comes into play: create a class that does not map to a domain object, and let it achieve this new responsibility in a cohesive way.`,
       },
       {
@@ -74,8 +69,8 @@ export const questions: Question[] = [{
         title: "Protected variations",
         description: `is related to the one of Low coupling, because it helps reducing the impacts of the changes of the code of one part A on another part B. 
         The code of part B is protected against the variations of the code of part A, hence the name of the pattern. 
-       How do you achieve such a protection? By organizing the responsibilities around stable interfaces. 
-       This is particularly relevant for code that tends to change often. `,
+        You achieve such a protection by organizing the responsibilities around stable interfaces. 
+        This is particularly relevant for code that tends to change often. `,
       },
     ],
     links: [

@@ -1,0 +1,21 @@
+.quiz {
+  text-align: left;
+
+  &__item {
+    margin: 0.5rem 0;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #999999;
+    }
+
+    &--correct {
+      border: 2px solid green;
+    }
+
+    &--error {
+      border: 2px solid red;
+    }
+  }
+}
