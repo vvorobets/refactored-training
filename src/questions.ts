@@ -1,16 +1,16 @@
 import { Question } from "./question";
 
-export const questions: Question[] = [{
+export const questions: Question[] = [
+  {
     id: "3",
     title: "GRASP patterns",
     group: "GRASP patterns",
-    description: `The GRASP principles will let you understand the rationale behind the GoF design patterns. \n
-      There are nine GRASP patterns:`,
+    description: `There are nine GRASP patterns:`,
     list: [
       {
         title: "Information expert",
-        description:
-          "if you have an operation to do, and this operations needs inputs, then you should consider putting the responsibility of carrying out this operation in the class that contains the inputs for it.",
+        description: `if you have an operation to do which needs inputs, 
+          then you should consider putting the responsibility of carrying out this operation in the class that contains the inputs for it.`,
       },
       {
         title: "Creator",
@@ -20,57 +20,50 @@ export const questions: Question[] = [{
       },
       {
         title: "Low coupling",
-        description:
-          "Coupling is a measure of how strongly one element is connected to, has knowledge of, or relies on other elements. Coupling happens between two parts of the code when one depends on the other",
+        description: `is a measure of how strongly one element is connected to, has knowledge of, or relies on other elements. 
+          It happens between two parts of the code when one depends on the other.`,
       },
       {
         title: "High cohesion",
-        description: `The principle encourages to focus classes around one responsibility, and to have all its components oriented towards achieving this responsibility. 
-      This is the principle of “do one thing and do it well”. 
-      Also applies to other elements of the code, such as functions, and also modules and systems. 
-      This ties back well with the idea of having a well-organized code: a highly cohesive component lets you label it in your mind with “this is the part of the code that does X”. 
-      This allows better mental abstractions as well as code abstractions. 
-      is a measure of how strongly related and focused the responsibilities of an element are`,
+        description: `encourages to focus classes (functions, modules or systems) around one responsibility,
+        and to have all its components oriented towards achieving this responsibility. 
+        Is a measure of how strongly related and focused the responsibilities of an element are.`,
       },
       {
         title: "Polymorphism",
-        description: `is often seen as having a base class with virtual methods that defines an interface, and derived classes implementing this interface, but this is only one type of polymorphism. 
-      There are plenty of types of it (including templates for example). 
-      The usage is when there are several ways to accomplish a task, and you want to decouple the clients of this task from the various pieces of code that implement the various ways to perform it. 
-      The principle is very close to the GoF Strategy pattern, if not identical. It contributes to the Low Coupling principle.`,
+        description: `having a base class with virtual methods that defines an interface, and derived classes implementing this interface,
+        but this is only one type of it, there are plenty of them (eg., templates). 
+      The usage is when there are several ways to accomplish a task,
+      and you want to decouple the clients of this task from the various pieces of code that implement the various ways to perform it. 
+      Is very close to the GoF Strategy pattern, if not identical, and contributes to the Low Coupling principle.`,
       },
       {
         title: "Pure fabrication",
-        description: `It is natural to represent in our code objects that map the reality of the domain that we’re trying to model. 
-      For example, if you’re working on a financial application, you can probably expect to encounter some classes called Transaction or Portfolio in the code. 
-      But sometimes you have a responsibility to assign, and it seems to not fit well in any domain class. 
-      And according to the principle of High cohesion, you shouldn’t force a responsibility into a class that is already doing something else. 
-      That’s when the principle comes into play: create a class that does not map to a domain object, and let it achieve this new responsibility in a cohesive way.`,
+        description: `when you have a responsibility to assign that seems to not fit well in any domain class
+        (according to High cohesion, you shouldn’t force a responsibility into a class that is already doing something else),
+        then you create a class that does not map to a domain object, and let it achieve the new responsibility in a cohesive way.
+        Example: a UI Controller, in the GoF design patterns: a Facade object.`,
       },
       {
         title: "Controller",
-        description: `Here is an example of a pure fabrication: a UI Controller. 
-        Personal opinion: I would have kept this as an example of pure fabrication and not made a principle out of it.
-         Is the first non-UI component that receives the UI event and organizes the operations to react to this event. 
-         Indeed, that doesn’t map to any domain object, even if the UI itself can display domain concepts. 
-         There are also other examples of pure fabrications in the GoF design patterns: for example, a Facade object is a pure fabrication.`,
+        description: `the first non-UI component that receives the UI event and organizes the operations to react to this event. 
+        Doesn’t map to any domain object, even if the UI itself can display domain concepts.`,
       },
       {
         title: "Indirection",
-        description: `is another way to reduce coupling by creating an intermediary class (or any kind of component) between two classes A and B. 
+        description: `is another way to reduce coupling by creating an intermediary class between two classes A and B. 
         This way, the changes in each one of A and B don’t affect the other one. 
         The intermediary class absorbs the impact by adapting its code rather than A or B (or more other classes). 
         This relates a lot to the Adapter design pattern, even though the Adapter design pattern is rather made to connect two existing incompatible interfaces. 
         But it also has the effect of protecting each one against the changes of the other. 
         It looks a bit like Protected variations, as they both introduce a layer between components in order to reduce coupling. 
-        According to my understanding, the difference between Protected variations and Indirection is that Protected variations is about designing interfaces in the existing components, whereas Indirection is about introducing a new component in the middle.`,
+        Protected variations is about designing interfaces in the existing components, whereas Indirection is about introducing a new component in the middle.`,
       },
       {
         title: "Protected variations",
-        description: `is related to the one of Low coupling, because it helps reducing the impacts of the changes of the code of one part A on another part B. 
-        The code of part B is protected against the variations of the code of part A, hence the name of the pattern. 
-        You achieve such a protection by organizing the responsibilities around stable interfaces. 
-        This is particularly relevant for code that tends to change often. `,
+        description: `helps reducing the impacts of the changes of the code of one part A on another part B. 
+        The code of part B is protected against the variations of the code of part A, by organizing the responsibilities around stable interfaces.
+        Is related to the one of Low coupling.`,
       },
     ],
     links: [
@@ -86,11 +79,11 @@ export const questions: Question[] = [{
       {
         title: "ESLint",
         description: `a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. 
-      Linting is all about analysing the code without having to execute it`,
+      Is all about analysing the code without having to execute it`,
       },
       {
         title: "Prettier",
-        description: `An opinionated code formatter`,
+        description: `an opinionated code formatter`,
       },
       {
         title: "GIT (for Code Review)",
@@ -123,29 +116,19 @@ export const questions: Question[] = [{
     title: "Cyclomatic complexity",
     group: "Code quality",
     description: `Cyclomatic complexity (CYC) is a software metric used to determine the complexity of a program. 
-    It is a count of the number of decisions in the source code. 
-    The higher the count, the more complex the code.
-    Why it's important: 1) Limit code complexity; 2) Determine the number of test cases required.
-    How to calculate CYC: CYC = E – N + 2P
-
-  (E = Number of edges (transfers of control); 
-  N = Number of nodes (sequential group of statements containing only one transfer of control);
-  This translates to the number of decisions + 1;
-  P = Number of disconnected parts of the flow graph (e.g. a calling program and a subroutine)).
-  
-  Binary decisions (if/while) add 1 to complexity.
-  Boolean operators can add either one or nothing to complexity. For instance, one may be added if a Boolean operator is found within a conditional statement.
-    
-  void foo(void)
-  {
-      if (a)
-          if (b) 
-              x=1;
-      else
-          x=2;
-   }
-  So, CYC = 3 in this example. 
-  `,
+    Is a count of the number of decisions in the source code (the higher the count, the more complex the code).
+    Usage: 1) Limit code complexity; 2) Determine the number of test cases required.
+    How to calculate CYC: CYC = E – N + 2P (E = Number of edges (transfers of control), 
+    N = Number of nodes (sequential group of statements containing only one transfer of control),
+    P = Number of disconnected parts of the flow graph (e.g. a calling program and a subroutine)).
+    Binary decisions (if/while) add 1 to complexity.
+    Boolean operators can add either one or nothing to complexity. For instance, one may be added if a Boolean operator is found within a conditional statement.
+    function foo() {
+      if (a) {
+        if (b) { x=1; }
+      } else { x = 2 };
+    }
+    CYC = 3 in this example. `,
   },
   {
     id: "5.1",
@@ -156,28 +139,27 @@ export const questions: Question[] = [{
       {
         title: "Test-Driven Development (TDD)",
         description: `a testing methodology or a programming practice implemented from a developer’s perspective. 
-  This technique starts by designing and writing test cases for every small functionality of an application. 
-  The main intention of this technique is to modify or write a fresh code only when the test fails. 
-  In a TDD approach, automated test scripts are written before functional pieces of code. Involves the following steps:
+  Starts by designing and writing test cases for every small functionality of an application. 
+  The main intention is to modify or write a fresh code only when the test fails. 
+  In this approach, automated test scripts are written before functional pieces of code. Involves the following steps:
   1) Write a Failing Test - 2) Execute All Existing Tests - 3) Write Production Code to Make the Test Pass - 4) Refactor If Necessary.
-  Benefits of Test-Driven Development: Simpler design; Fewer defects; Detailed project specification; High test coverage; High code coverage; Fewer regression problems.`,
+  Benefits: Simpler design; Fewer defects; Detailed project specification; High test coverage; High code coverage; Fewer regression problems.`,
       },
       {
         title: "Behavioral-Driven Development (BDD) ",
         description: `is a testing approach derived from the TDD methodology. 
         Tests are mainly based on systems behavior, in most cases, the Given-When-Then approach is used for writing test cases.
         1) Write the Behavior - 2) Convert the Plain English Behaviors Into Scripts - 3) Implement the Behavior by Writing Production Code - 4) Refactor If Needed.
-        Key benefits of Behavioral-Driven Development approach: Collaboration; Fewer defects; Fewer regression problems; Comprehensive project documentation fit for multiple target audiences;
-        Traceability for every piece of functionality.`,
+        Key benefits: Collaboration; Fewer defects; Fewer regression problems; Comprehensive project documentation; Traceability for every piece of functionality.`,
       },
       {
         title: `Acceptance Test-Driven Development (ATDD)`,
-        description: `a single acceptance test is written from the user’s perspective.
+        description: `a single test is written from the user’s perspective.
         It mainly focuses on satisfying the functional behavior of the system. 
-        This technique attempts to answer the question – Is the code working as expected?
+        Attempts to answer the question – Is the code working as expected?
 
         A key difference: BDD focuses more on the behavior of the feature, whereas ATDD focuses on capturing the accurate requirements.
-        The following are some of the key practices in ATDD:
+        Key practices:
         - Analyzing and discussing the real-world scenarios
         - Deciding the acceptance criteria for those test scenarios
         - Automating the acceptance test cases
@@ -185,7 +167,7 @@ export const questions: Question[] = [{
 
         Benefits: 1) Requirements are very clearly analyzed without any ambiguity; 
         2) Encourages collaboration among cross-team members;
-        3) The acceptance test serves as a guide for the entire development process`,
+        3) Test serves as a guide for the entire development process`,
       },
     ],
   },
@@ -193,8 +175,7 @@ export const questions: Question[] = [{
     id: "5.2",
     title: "Different types of tests",
     group: "Testing",
-    description:
-      "Accessibility, Acceptance, Black box, End to end, Functional, Interactive, Integration, Load, Non functional, Performance, Regression, Sanity, Security, Single user performance, Smoke, Stress, Unit, White-box",
+    description: "",
     list: [
       {
         title: "Unit tests",
@@ -203,7 +184,7 @@ export const questions: Question[] = [{
       {
         title: "Integration tests",
         description: `verify that different modules or services used by your application work well together. For example, it can be testing the interaction with the database or making sure that microservices work together as expected. 
-        These types of tests are more expensive to run as they require multiple parts of the application to be up and running.`,
+        Are more expensive to run as they require multiple parts of the application to be up and running.`,
       },
       {
         title: "Functional tests",
@@ -212,18 +193,20 @@ export const questions: Question[] = [{
       },
       {
         title: "End-to-end tests",
-        description: `replicates a user behavior with the software in a complete application environment. It verifies that various user flows work as expected and can be as simple as loading a web page or logging in or much more complex scenarios verifying email notifications, online payments, etc...
-      Are very useful, but they're expensive to perform and can be hard to maintain when they're automated.`,
+        description: `replicates a user behavior with the software in a complete application environment.
+      Are very useful, but expensive to perform and can be hard to maintain when they're automated.`,
       },
       {
         title: "Acceptance tests",
         description: `are formal tests executed to verify if a system satisfies its business requirements.
-        They require the entire application to be up and running and focus on replicating user behaviors. But they can also go further and measure the performance of the system and reject changes if certain goals are not met.`,
+        They require the entire application to be up and running and focus on replicating user behaviors. 
+        But they can also go further and measure the performance of the system and reject changes if certain goals are not met.`,
       },
       {
         title: "Performance tests",
-        description: `check the behaviors of the system when it is under significant load. These tests are non-functional and can have the various form to understand the reliability, stability, and availability of the platform.
-      Are by their nature quite costly to implement and run, but they can help you understand if new changes are going to degrade your system.`,
+        description: `check the behaviors of the system when it is under significant load. 
+        These tests are non-functional and can have the various form to understand the reliability, stability, and availability of the platform.
+        Are by their nature quite costly to implement and run, but they can help you understand if new changes are going to degrade your system.`,
       },
       {
         title: "Smoke tests",
@@ -249,12 +232,12 @@ export const questions: Question[] = [{
       {
         title: "Dummy",
         description:
-          "objects are passed around but never actually used. Usually they are just used to fill parameter lists.",
+          "objects passed around but never actually used. Usually they are just used to fill parameter lists.",
       },
       {
         title: "Fake",
         description:
-          "objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example)",
+          "objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (in-memory database)",
       },
       {
         title: "Stubs",
@@ -282,109 +265,99 @@ export const questions: Question[] = [{
     id: "6.1",
     title: "Recap of SOC principle, practical use if possible",
     group: "Object oriented design",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "6.2",
     title: "GoF patterns / Antipatterns",
     group: "Object oriented design",
-    description:
-      ``,
-      links: ['http://refactoring.guru']
+    description: ``,
+    links: ["http://refactoring.guru"],
   },
   {
     id: "6.3",
     title: "Abstraction Qualities (cohesion high / low, coupling)",
     group: "Object oriented design",
-    description:
-      ``,
+    description: ``,
   },
 
   {
     id: "7.1",
     title: "Learn about UML syntax, notations, and use-cases",
     group: "UML Modeling",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "7.2",
-    title: "Know about Structure, Behaviour, State, Interaction and Sequence diagram, as well as more simple once (class, flow and use-cases diagrams)",
+    title:
+      "Know about Structure, Behaviour, State, Interaction and Sequence diagram, as well as more simple once (class, flow and use-cases diagrams)",
     group: "UML Modeling",
-    description:
-      ``,
+    description: ``,
   },
 
   {
     id: "8.1",
-    title: "Parallelism in Node.JS: Learn how nodejs works in parallel on OS level (thread env)",
+    title:
+      "Parallelism in Node.JS: Learn how nodejs works in parallel on OS level (thread env)",
     group: "NodeJS",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "8.2",
-    title: "Parallelism in Node.JS: child_process, cluster, and workers libs, difference, know when to use what",
+    title:
+      "Parallelism in Node.JS: child_process, cluster, and workers libs, difference, know when to use what",
     group: "NodeJS",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "8.5",
     title: "Get familiar with V8 and VM modules",
     group: "NodeJS",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "8.6",
     title: "Graceful shutdown techniques",
     group: "NodeJS",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "8.7",
     title: "Extend knowledge about core modules in NodeJS",
     group: "NodeJS",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "8.8",
     title: "Learn how ORM and ODM are working",
     group: "NodeJS",
-    description:
-      ``,
+    description: ``,
   },
 
   {
     id: "9.1",
-    title: "Learn about memory management along with the structures that are used to provide memory env (stack, heap, queue)",
+    title:
+      "Learn about memory management along with the structures that are used to provide memory env (stack, heap, queue)",
     group: "Core JavaScript",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "9.2",
-    title: "Know about how GC is working (where/when it's running, the possibility of running it manually, why it could be useful)",
+    title:
+      "Know about how GC is working (where/when it's running, the possibility of running it manually, why it could be useful)",
     group: "Core JavaScript",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "9.3",
     title: "Recap about prototypal inheritance",
     group: "Core JavaScript",
-    description:
-      ``,
+    description: ``,
   },
   {
     id: "9.4",
     title: "WeakSet and WeakMap recap",
     group: "Core JavaScript",
-    description:
-      ``,
+    description: ``,
   },
 ];

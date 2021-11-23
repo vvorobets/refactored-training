@@ -75,7 +75,7 @@ export const Quiz = ({ data }: Props) => {
         </div>
       ))}
       {isVerified ? (
-        <Button label="Refresh!" handleClick={refresh} />
+        <Button label="Take new" handleClick={refresh} />
       ) : (
         <Button label="Check!" handleClick={() => setVerified(true)} />
       )}

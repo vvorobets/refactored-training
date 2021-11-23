@@ -18,7 +18,7 @@ export const QuestionDetails = ({ data }: Props) => {
       <h3 className="question-details__title">
         {title}
         {!!list?.length && !isQuiz && (
-          <Button label="Take Quiz!" handleClick={() => setQuiz(true)} />
+          <Button label="Take Quiz" handleClick={() => setQuiz(true)} />
         )}
       </h3>
 
