@@ -29,15 +29,23 @@ export const Quiz = ({ data }: Props) => {
   const { answer, options } = useMemo(() => {
     const answer = Math.floor(Math.random() * (list?.length || 0));
 
-    const options = new Set<number>([]);
+    const optionsSet = new Set<number>([]);
 
-    options.add(answer);
+    optionsSet.add(answer);
 
-    while (options.size < maxOptions) {
-      options.add(Math.floor(Math.random() * (list?.length || 0)));
+    while (optionsSet.size < maxOptions) {
+      optionsSet.add(Math.floor(Math.random() * (list?.length || 0)));
     }
 
-    return { answer, options: Array.from(options) };
+    const options = list
+      ? Array.from(optionsSet).sort(
+          (a, b) =>
+            list[a].description.charCodeAt(0) -
+            list[b].description.charCodeAt(0)
+        )
+      : [];
+
+    return { answer, options };
   }, [list, maxOptions, refresher]);
 
   if (!list?.length) return null;
