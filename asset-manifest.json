@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/refactored-training/static/css/main.1870f1c9.chunk.css",
-    "main.js": "/refactored-training/static/js/main.beb0f227.chunk.js",
-    "main.js.map": "/refactored-training/static/js/main.beb0f227.chunk.js.map",
-    "runtime-main.js": "/refactored-training/static/js/runtime-main.690fed5a.js",
-    "runtime-main.js.map": "/refactored-training/static/js/runtime-main.690fed5a.js.map",
-    "static/js/2.45f6db6a.chunk.js": "/refactored-training/static/js/2.45f6db6a.chunk.js",
-    "static/js/2.45f6db6a.chunk.js.map": "/refactored-training/static/js/2.45f6db6a.chunk.js.map",
-    "static/js/3.6250dca7.chunk.js": "/refactored-training/static/js/3.6250dca7.chunk.js",
-    "static/js/3.6250dca7.chunk.js.map": "/refactored-training/static/js/3.6250dca7.chunk.js.map",
+    "main.css": "/refactored-training/static/css/main.53ce0f41.chunk.css",
+    "main.js": "/refactored-training/static/js/main.79ac41f8.chunk.js",
+    "main.js.map": "/refactored-training/static/js/main.79ac41f8.chunk.js.map",
+    "runtime-main.js": "/refactored-training/static/js/runtime-main.acfded35.js",
+    "runtime-main.js.map": "/refactored-training/static/js/runtime-main.acfded35.js.map",
+    "static/js/2.47cf40b3.chunk.js": "/refactored-training/static/js/2.47cf40b3.chunk.js",
+    "static/js/2.47cf40b3.chunk.js.map": "/refactored-training/static/js/2.47cf40b3.chunk.js.map",
+    "static/js/3.3ce03209.chunk.js": "/refactored-training/static/js/3.3ce03209.chunk.js",
+    "static/js/3.3ce03209.chunk.js.map": "/refactored-training/static/js/3.3ce03209.chunk.js.map",
     "index.html": "/refactored-training/index.html",
-    "static/css/main.1870f1c9.chunk.css.map": "/refactored-training/static/css/main.1870f1c9.chunk.css.map",
-    "static/js/2.45f6db6a.chunk.js.LICENSE.txt": "/refactored-training/static/js/2.45f6db6a.chunk.js.LICENSE.txt"
+    "static/css/main.53ce0f41.chunk.css.map": "/refactored-training/static/css/main.53ce0f41.chunk.css.map",
+    "static/js/2.47cf40b3.chunk.js.LICENSE.txt": "/refactored-training/static/js/2.47cf40b3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.690fed5a.js",
-    "static/js/2.45f6db6a.chunk.js",
-    "static/css/main.1870f1c9.chunk.css",
-    "static/js/main.beb0f227.chunk.js"
+    "static/js/runtime-main.acfded35.js",
+    "static/js/2.47cf40b3.chunk.js",
+    "static/css/main.53ce0f41.chunk.css",
+    "static/js/main.79ac41f8.chunk.js"
   ]
 }
