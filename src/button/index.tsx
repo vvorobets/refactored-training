@@ -7,8 +7,12 @@ interface Props {
   handleClick: () => any;
 }
 
-export const Button = ({ label, handleClick }: Props) => (
-  <button className="button" onClick={handleClick}>
+export const Button = ({
+  label,
+  handleClick,
+  ...rest
+}: Props & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+  <button className="button" onClick={handleClick} {...rest}>
     {label}
   </button>
 );
