@@ -2,59 +2,46 @@
   position: sticky;
   top: 0;
 
-  height: 5rem;
-  padding: 0 2rem;
   background-color: #3f2d7b;
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
 
-  display: flex;
-  justify-content: space-between;
-
-  &__nav-item {
-    height: 100%;
+  &__top {
+    height: 5rem;
+    padding: 0 2rem;
 
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    cursor: pointer;
   }
 
-  &__dropdown {
-    display: none;
-    width: 100%;
-    // padding: 2rem;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #3f2d7b;
-    cursor: initial;
-
-    &--align-right {
-      justify-content: flex-end;
-    }
-  }
-
-  &__nav-item--dropdown:hover &__dropdown {
-    display: flex;
-  }
-
-  &__list {
+  &__navbar {
+    margin: 0;
     list-style: none;
     text-align: left;
     font-size: 1rem;
     font-weight: 400;
 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
     &-item {
-      margin: 1rem 0;
+      border: 2px solid transparent;
+      padding: 1rem;
       cursor: pointer;
+
+      &--active {
+        border-top-color: white;
+        background-color: lighten(#3f2d7b, 5);
+      }
     }
   }
 
   &__input {
     &--search {
       height: 2rem;
-      margin: 0 2rem 2rem auto;
       padding: 0.5rem 1rem;
       font-size: 1.5rem;
       font-weight: 500;

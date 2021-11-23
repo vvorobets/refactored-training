@@ -45,13 +45,13 @@ export const questions: Question[] = [{
       For example, if you’re working on a financial application, you can probably expect to encounter some classes called Transaction or Portfolio in the code. 
       But sometimes you have a responsibility to assign, and it seems to not fit well in any domain class. 
       And according to the principle of High cohesion, you shouldn’t force a responsibility into a class that is already doing something else. 
-      That’s when the principle of Pure fabrication comes into play: create a class that does not map to a domain object, and let it achieve this new responsibility in a cohesive way.`,
+      That’s when the principle comes into play: create a class that does not map to a domain object, and let it achieve this new responsibility in a cohesive way.`,
       },
       {
         title: "Controller",
         description: `Here is an example of a pure fabrication: a UI Controller. 
         Personal opinion: I would have kept this as an example of pure fabrication and not made a principle out of it.
-         The controller is the first non-UI component that receives the UI event and organizes the operations to react to this event. 
+         Is the first non-UI component that receives the UI event and organizes the operations to react to this event. 
          Indeed, that doesn’t map to any domain object, even if the UI itself can display domain concepts. 
          There are also other examples of pure fabrications in the GoF design patterns: for example, a Facade object is a pure fabrication.`,
       },
@@ -62,7 +62,7 @@ export const questions: Question[] = [{
         The intermediary class absorbs the impact by adapting its code rather than A or B (or more other classes). 
         This relates a lot to the Adapter design pattern, even though the Adapter design pattern is rather made to connect two existing incompatible interfaces. 
         But it also has the effect of protecting each one against the changes of the other. 
-        Indirection looks a bit like Protected variations, as they both introduce a layer between components in order to reduce coupling. 
+        It looks a bit like Protected variations, as they both introduce a layer between components in order to reduce coupling. 
         According to my understanding, the difference between Protected variations and Indirection is that Protected variations is about designing interfaces in the existing components, whereas Indirection is about introducing a new component in the middle.`,
       },
       {
@@ -93,11 +93,11 @@ export const questions: Question[] = [{
         description: `An opinionated code formatter`,
       },
       {
-        title: "GIT (Code Review)",
+        title: "GIT (for Code Review)",
         description: `Open Source distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people`,
       },
       {
-        title: "Unit, integration, and functional testing",
+        title: "Automated testing",
         description: `Unit: jest, mocha, sinon, chai, jasmine. Integrational: Selenium WebDriver, cypress, supertest`,
       },
       {
@@ -150,7 +150,7 @@ export const questions: Question[] = [{
   {
     id: "5.1",
     title: "TDD / BDD",
-    group: "Testing / Unit testing",
+    group: "Testing",
     description: ``,
     list: [
       {
@@ -183,7 +183,7 @@ export const questions: Question[] = [{
         - Automating the acceptance test cases
         - Focusing on the development of those requirement cases.
 
-        Benefits of ATDD: 1) Requirements are very clearly analyzed without any ambiguity; 
+        Benefits: 1) Requirements are very clearly analyzed without any ambiguity; 
         2) Encourages collaboration among cross-team members;
         3) The acceptance test serves as a guide for the entire development process`,
       },
@@ -192,13 +192,13 @@ export const questions: Question[] = [{
   {
     id: "5.2",
     title: "Different types of tests",
-    group: "Testing / Unit testing",
+    group: "Testing",
     description:
       "Accessibility, Acceptance, Black box, End to end, Functional, Interactive, Integration, Load, Non functional, Performance, Regression, Sanity, Security, Single user performance, Smoke, Stress, Unit, White-box",
     list: [
       {
         title: "Unit tests",
-        description: `are very low level. They consist in testing individual methods and functions of the classes, components or modules used by your software. Unit tests are in general quite cheap to automate and can be run very quickly.`,
+        description: `are very low level. They consist in testing individual methods and functions of the classes, components or modules used by your software. Are in general quite cheap to automate and can be run very quickly.`,
       },
       {
         title: "Integration tests",
@@ -213,7 +213,7 @@ export const questions: Question[] = [{
       {
         title: "End-to-end tests",
         description: `replicates a user behavior with the software in a complete application environment. It verifies that various user flows work as expected and can be as simple as loading a web page or logging in or much more complex scenarios verifying email notifications, online payments, etc...
-      End-to-end tests are very useful, but they're expensive to perform and can be hard to maintain when they're automated.`,
+      Are very useful, but they're expensive to perform and can be hard to maintain when they're automated.`,
       },
       {
         title: "Acceptance tests",
@@ -223,12 +223,12 @@ export const questions: Question[] = [{
       {
         title: "Performance tests",
         description: `check the behaviors of the system when it is under significant load. These tests are non-functional and can have the various form to understand the reliability, stability, and availability of the platform.
-      Performance tests are by their nature quite costly to implement and run, but they can help you understand if new changes are going to degrade your system.`,
+      Are by their nature quite costly to implement and run, but they can help you understand if new changes are going to degrade your system.`,
       },
       {
         title: "Smoke tests",
-        description: `Smoke tests are basic tests that check basic functionality of the application. They are meant to be quick to execute, and their goal is to give you the assurance that the major features of your system are working as expected.
-      Smoke tests can be useful right after a new build is made to decide whether or not you can run more expensive tests, or right after a deployment to make sure that they application is running properly in the newly deployed environment.`,
+        description: `are basic tests that check basic functionality of the application. They are meant to be quick to execute, and their goal is to give you the assurance that the major features of your system are working as expected.
+      Can be useful right after a new build is made to decide whether or not you can run more expensive tests, or right after a deployment to make sure that they application is running properly in the newly deployed environment.`,
       },
       {
         title: "Black Box Testing",
@@ -243,7 +243,7 @@ export const questions: Question[] = [{
   {
     id: "5.3",
     title: "Test doubles: mock, stub, spy, fake, dummy",
-    group: "Testing / Unit testing",
+    group: "Testing",
     description: "",
     list: [
       {

@@ -53,6 +53,7 @@ export const Quiz = ({ data }: Props) => {
               : ""
           } ${isVerified && answer === idx ? "quiz__item--correct" : ""} `}
           key={idx}
+          onClick={() => (isVerified ? null : setChecked(idx))}
         >
           <input
             className="quiz__radio"
@@ -62,13 +63,7 @@ export const Quiz = ({ data }: Props) => {
             onChange={() => setChecked(idx)}
             disabled={isVerified}
           />
-          <label
-            className="quiz__label"
-            htmlFor={`quiz-${idx}`}
-            onClick={() => (isVerified ? null : setChecked(idx))}
-          >
-            {list[idx]?.description}
-          </label>
+          <label className="quiz__label">{list[idx]?.description}</label>
         </div>
       ))}
       {isVerified ? (

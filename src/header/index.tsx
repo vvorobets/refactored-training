@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../button";
 
 import "./style.scss";
 
@@ -11,32 +12,36 @@ interface Props {
 export const Header = ({ competencies, search, handleSearch }: Props) => {
   return (
     <div className="header">
-      <div className="header__nav-item header__nav-item--dropdown">
-        Competencies
-        <div className="header__dropdown">
-          <ul className="header__list">
-            {competencies.map((item) => (
-              <li
-                className="header__list-item"
-                onClick={() => handleSearch(item)}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="header__top">
+        <input
+          className="header__input header__input--search"
+          type="text"
+          placeholder="Search"
+          value={search}
+          onChange={(e) => handleSearch(e.target.value)}
+        />
+        <Button label="Reset" handleClick={() => handleSearch("")} />
       </div>
-      <div className="header__nav-item header__nav-item--dropdown">
-        Search
-        <div className="header__dropdown header__dropdown--align-right">
-          <input
-            className="header__input header__input--search"
-            type="text"
-            value={search}
-            onChange={(e) => handleSearch(e.target.value)}
-          />
-        </div>
-      </div>
+      <ul className="header__navbar">
+        <li
+          className={`header__navbar-item ${
+            search ? "" : "header__navbar-item--active"
+          }`}
+          onClick={() => handleSearch("")}
+        >
+          All
+        </li>
+        {competencies.map((item) => (
+          <li
+            className={`header__navbar-item ${
+              search === item ? "header__navbar-item--active" : ""
+            }`}
+            onClick={() => handleSearch(item)}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

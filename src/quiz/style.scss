@@ -3,8 +3,8 @@
 
   &__item {
     margin: 0.5rem 0;
+    padding: 0.25rem;
     border: 2px solid transparent;
-    cursor: pointer;
 
     &:hover {
       background-color: #999999;
@@ -17,5 +17,11 @@
     &--error {
       border: 2px solid red;
     }
+  }
+
+  &__item,
+  &__radio,
+  &__label {
+    cursor: pointer;
   }
 }
