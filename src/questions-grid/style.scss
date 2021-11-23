@@ -10,6 +10,11 @@
   justify-content: space-around;
 
   .question-card {
-      width: 28%;
+    width: 28%;
+    overflow: hidden;
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
   }
 }

@@ -14,10 +14,15 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    @media (max-width: 480px) {
+      padding: 0 0.5rem;
+    }
   }
 
   &__navbar {
     margin: 0;
+    padding: 0;
     list-style: none;
     text-align: left;
     font-size: 1rem;
@@ -26,6 +31,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media (max-width: 480px) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      font-size: 0.75rem;
+    }
 
     &-item {
       border: 2px solid transparent;
@@ -45,6 +56,12 @@
       padding: 0.5rem 1rem;
       font-size: 1.5rem;
       font-weight: 500;
+
+      @media (max-width: 480px) {
+        height: 1.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
     }
   }
 }
