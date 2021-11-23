@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/refactored-training/static/css/main.0745308d.chunk.css",
-    "main.js": "/refactored-training/static/js/main.80aab73b.chunk.js",
-    "main.js.map": "/refactored-training/static/js/main.80aab73b.chunk.js.map",
+    "main.js": "/refactored-training/static/js/main.390f2ba9.chunk.js",
+    "main.js.map": "/refactored-training/static/js/main.390f2ba9.chunk.js.map",
     "runtime-main.js": "/refactored-training/static/js/runtime-main.690fed5a.js",
     "runtime-main.js.map": "/refactored-training/static/js/runtime-main.690fed5a.js.map",
     "static/js/2.45f6db6a.chunk.js": "/refactored-training/static/js/2.45f6db6a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.690fed5a.js",
     "static/js/2.45f6db6a.chunk.js",
     "static/css/main.0745308d.chunk.css",
-    "static/js/main.80aab73b.chunk.js"
+    "static/js/main.390f2ba9.chunk.js"
   ]
 }
